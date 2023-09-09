@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@200&family=Press+Start+2P&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            color: #FCE029;
+            background-color: black;
+            font-family: "Press Start 2P";
+            text-transform: uppercase;
+            padding: 5px;
+            background-image: url("https://i.pinimg.com/originals/02/7c/46/027c46fb3fd8230f700d6586bb1e2f15.jpg");
+            background-position: right;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        #intro{
+            padding-top: 2%;
+            border: none;
+            font-size: 11px;
+        }
+        #t2{
+            font-size: 8px;
+            border: none;
+        }
+        #otp{
+            font-family: "Press Start 2P";
+            border: none;
+            color: #0a75bc;
+            font-size: 25px;
+        }
+
+        #time {
+            font-size: 6px;
+            border: none;
+            padding-bottom: 10px;
+        }
+
+        section{
+            padding-top: 30px;
+            padding-left:12px;
+            padding-right:12px;
+            position: relative;
+            height: 375px;
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+<div align="center">
+   <section>
+       <h3 id="intro">Hi <span th:text="${username}"></span></h3>
+       <h5 id="t1">Here is your one time pass code</h5>
+       <h4 id="otp"><span th:text="${otp}"></span></h4>
+       <P id="t2">To verify your email</P>
+       <h6 id="code">Valid for 5 minutes</h6>
+       <h2 id="time">generated at <span th:text="${time}"></span></h2>
+   </section>
+</div>
+</body>
+</html>
